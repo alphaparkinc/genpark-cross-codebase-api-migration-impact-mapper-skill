@@ -1,0 +1,42 @@
+{
+  "name": "genpark-cross-codebase-api-migration-impact-mapper-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-repository cross-codebase API migration impact mapper generating automated codemod migration playbooks.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "code-synthesis",
+  "tags": [
+    "greptile",
+    "sourcegraph-cody",
+    "api-migration",
+    "codemod",
+    "cross-repo-refactor"
+  ],
+  "inputs": {
+    "deprecated_api_signature": {
+      "type": "string"
+    },
+    "replacement_api_signature": {
+      "type": "string"
+    },
+    "target_repositories": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "impact_map_id": {
+      "type": "string"
+    },
+    "impacted_repositories_count": {
+      "type": "integer"
+    },
+    "code_occurrences_found_count": {
+      "type": "integer"
+    },
+    "migration_roadmap_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
